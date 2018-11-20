@@ -3,11 +3,18 @@ import logo from '../../logo.svg';
 import './index.css';
 
 export default class Home extends Component {
+    onClick = () => {
+        let ddd = ""
+
+        window.speechSynthesis.speak(new SpeechSynthesisUtterance(ddd))
+    };
     render() {
         return (
             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
+                    <div onClick={this.onClick}>
+                        <img src={logo} className="App-logo" alt="logo" />
+                    </div>
                     <p>
                         Edit <code>src/App.js</code> and save to reload.
                     </p>
